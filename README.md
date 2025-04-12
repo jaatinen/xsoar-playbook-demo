@@ -1,4 +1,5 @@
 # Cortex XSOAR Playbook Demo
+![CI](https://github.com/jaatinen/xsoar-playbook-demo/actions/workflows/validate-xsoar.yml/badge.svg)
 
 This project demonstrates a simulated Cortex XSOAR playbook for handling a phishing alert. It showcases typical components of an XSOAR-based SOAR workflow.
 

@@ -32,3 +32,13 @@ jobs:
         export PYTHONPATH=$PYTHONPATH:./scripts
         coverage run -m unittest discover -s scripts/tests -p "test_*.py"
         coverage report -m
+
+    - name: Generate HTML coverage report
+      run: |
+        coverage html
+
+    - name: Upload coverage report as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-coverage-report
+        path: htmlcov/
