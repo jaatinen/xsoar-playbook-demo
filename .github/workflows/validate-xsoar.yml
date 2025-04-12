@@ -37,8 +37,8 @@ jobs:
       run: |
         coverage html
 
-    - name: Upload coverage report as artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: html-coverage-report
-        path: htmlcov/
+  #  - name: Upload coverage report as artifact
+  #    uses: actions/upload-artifact@v3
+  #    with:
+  #      name: html-coverage-report
+  #      path: htmlcov/
