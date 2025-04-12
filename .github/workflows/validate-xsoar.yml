@@ -23,3 +23,7 @@ jobs:
       run: |
         chmod +x ci-cd/validate_playbook.sh
         ./ci-cd/validate_playbook.sh
+
+    - name: Run Python unit tests
+      run: |
+        python3 -m unittest discover -s scripts/tests -p "test_*.py"
