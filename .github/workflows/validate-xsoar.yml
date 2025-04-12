@@ -24,7 +24,11 @@ jobs:
         chmod +x ci-cd/validate_playbook.sh
         ./ci-cd/validate_playbook.sh
 
-    - name: Run Python unit tests
+    - name: Install coverage
+      run: pip install coverage
+
+    - name: Run tests with coverage
       run: |
         export PYTHONPATH=$PYTHONPATH:./scripts
-        python3 -m unittest discover -s scripts/tests -p "test_*.py"
+        coverage run -m unittest discover -s scripts/tests -p "test_*.py"
+        coverage report -m
