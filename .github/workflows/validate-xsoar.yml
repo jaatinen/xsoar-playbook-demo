@@ -1,0 +1,25 @@
+name: Validate XSOAR Demo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Run validation script
+      run: |
+        chmod +x ci-cd/validate_playbook.sh
+        ./ci-cd/validate_playbook.sh
