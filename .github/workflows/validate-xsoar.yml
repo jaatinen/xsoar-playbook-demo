@@ -26,4 +26,5 @@ jobs:
 
     - name: Run Python unit tests
       run: |
+        export PYTHONPATH=$PYTHONPATH:./scripts
         python3 -m unittest discover -s scripts/tests -p "test_*.py"
