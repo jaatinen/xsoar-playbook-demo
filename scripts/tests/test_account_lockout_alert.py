@@ -1,4 +1,4 @@
-from scripts.account_lockout_alert import should_lock_account
+from scripts.account_lockout_alert.account_lockout_alert import should_lock_account
 
 def test_should_lock():
     assert should_lock_account(6) == True

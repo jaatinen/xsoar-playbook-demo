@@ -1,4 +1,4 @@
-from scripts.login_from_new_device import is_known_device
+from scripts.login_from_new_device.login_from_new_device import is_known_device
 
 def test_known_device():
     known = {"user123": ["dev001", "dev002"]}

@@ -1,4 +1,5 @@
-from scripts.unauthorized_funds_transfer import check_transfer_amount
+from scripts.unauthorized_funds_transfer.unauthorized_funds_transfer import check_transfer_amount
+
 
 def test_large_transfer():
     result = check_transfer_amount(15000)

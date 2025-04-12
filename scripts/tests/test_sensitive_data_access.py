@@ -1,4 +1,5 @@
-from scripts.sensitive_data_access import is_outside_work_hours
+from scripts.sensitive_data_access.sensitive_data_access import is_outside_work_hours
+
 
 def test_access_at_night():
     assert is_outside_work_hours(2) == True
